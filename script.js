@@ -8,6 +8,7 @@ function addTask() {
         newTask.innerHTML = `<input type="checkbox" onclick="toggleTaskCompletion(this)">
                              <span onclick="toggleTask(this)">${taskValue}</span> 
                              <input type="date" onchange="updateDueDate(this)">
+                             <input type="color" onchange="changeTaskColor(this)"> 
                              <button onclick="deleteTask(this)">Delete</button>`;
         taskList.appendChild(newTask);
         taskInput.value = "";
@@ -49,4 +50,9 @@ function toggleTaskCompletion(checkbox) {
 function playCompletionSound() {
     var audio = new Audio('audio/mission_complete.mp3');
     audio.play();
+}
+function changeTaskColor(input) {
+    var taskText = input.nextElementSibling;
+    var color = input.value;
+    taskText.style.backgroundColor = color;
 }

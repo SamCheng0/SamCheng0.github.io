@@ -15,21 +15,25 @@
     <button onclick="addTask()">Add</button>
     <ul id="taskList">
         <li>
+
             <input type="checkbox" onclick="toggleTaskCompletion(this)">
             <span>Task 1</span>
             <input type="date" onchange="updateDueDate(this)">
+            <input type="color" onchange="changeTaskColor(this)">
             <button onclick="deleteTask(this)">Delete</button>
         </li>
         <li>
             <input type="checkbox" onclick="toggleTaskCompletion(this)">
             <span>Task 2</span>
             <input type="date" onchange="updateDueDate(this)">
+            <input type="color" onchange="changeTaskColor(this)">
             <button onclick="deleteTask(this)">Delete</button>
         </li>
     </ul>
 
 
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
